@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/board.css">
+        <link rel="icon" type="image/png" href="icon/favicon.ico">
+        <title>Easy</title>
+        <script src="js/easy.js"></script>
+    </head>
+    
+    <body>
+        <h1 id="title">TIC-TAC-TOE</h1>
+        <h1 id="scoreboard">X = 0 | O = 0</h1>
+        <div id="board">
+            <div class="flex-container">
+                <div class="buttons flex-container" id="but0" onclick="buttonFunc(0)"></div>
+                <div class="buttons flex-container" id="but1" onclick="buttonFunc(1)"></div>
+                <div class="buttons flex-container" id="but2" onclick="buttonFunc(2)"></div>
+                <div class="buttons flex-container" id="but3" onclick="buttonFunc(3)"></div>
+                <div class="buttons flex-container" id="but4" onclick="buttonFunc(4)"></div>
+                <div class="buttons flex-container" id="but5" onclick="buttonFunc(5)"></div>
+            </div>
+    
+            <div class="flex-container">
+                <div class="buttons flex-container" id="but6" onclick="buttonFunc(6)"></div>
+                <div class="buttons flex-container" id="but7" onclick="buttonFunc(7)"></div>
+                <div class="buttons flex-container" id="but8" onclick="buttonFunc(8)"></div>
+                <div class="buttons flex-container" id="but9" onclick="buttonFunc(9)"></div>
+                <div class="buttons flex-container" id="but10" onclick="buttonFunc(10)"></div>
+                <div class="buttons flex-container" id="but11" onclick="buttonFunc(11)"></div>
+            </div>
+    
+            <div class="flex-container">
+                <div class="buttons flex-container" id="but12" onclick="buttonFunc(12)"></div>
+                <div class="buttons flex-container" id="but13" onclick="buttonFunc(13)"></div>
+                <div class="buttons flex-container" id="but14" onclick="buttonFunc(14)"></div>
+                <div class="buttons flex-container" id="but15" onclick="buttonFunc(15)"></div>
+                <div class="buttons flex-container" id="but16" onclick="buttonFunc(16)"></div>
+                <div class="buttons flex-container" id="but17" onclick="buttonFunc(17)"></div>
+            </div>
+    
+            <div class="flex-container">
+                <div class="buttons flex-container" id="but18" onclick="buttonFunc(18)"></div>
+                <div class="buttons flex-container" id="but19" onclick="buttonFunc(19)"></div>
+                <div class="buttons flex-container" id="but20" onclick="buttonFunc(20)"></div>
+                <div class="buttons flex-container" id="but21" onclick="buttonFunc(21)"></div>
+                <div class="buttons flex-container" id="but22" onclick="buttonFunc(22)"></div>
+                <div class="buttons flex-container" id="but23" onclick="buttonFunc(23)"></div>
+            </div>
+    
+            <div class="flex-container">
+                <div class="buttons flex-container" id="but24" onclick="buttonFunc(24)"></div>
+                <div class="buttons flex-container" id="but25" onclick="buttonFunc(25)"></div>
+                <div class="buttons flex-container" id="but26" onclick="buttonFunc(26)"></div>
+                <div class="buttons flex-container" id="but27" onclick="buttonFunc(27)"></div>
+                <div class="buttons flex-container" id="but28" onclick="buttonFunc(28)"></div>
+                <div class="buttons flex-container" id="but29" onclick="buttonFunc(29)"></div>
+            </div>
+        </div>
+
+        <h2 id="result"></h2>
+        
+        <div class="flex-container">
+            <button id="nextg" onclick="nextg_button()">RESET BOARD</button>
+            <div id="filler"></div>
+            <button id="reset_score" onclick="reset_score()">RESET SCORE</button>
+        </div>
+    </body>
+</html>

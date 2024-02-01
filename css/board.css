@@ -1,0 +1,134 @@
+@font-face {
+    font-family: myFont;
+    src: url(Super\ Corn.ttf);
+  }
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #332941;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#title {
+    font-family: myFont;
+    font-size: 75px;
+    color: #F8E559;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+#scoreboard {
+    font-family: myFont;
+    letter-spacing: 2px;
+    color: #F8E559;
+    margin-bottom: 20px;
+}
+
+#result {
+    font-family: myFont;
+    font-size: 40px;
+    letter-spacing: 3px;
+    color: #F8E559;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nextg {
+    font-family: myFont;
+    font-size: 20px;
+    color: #3B3486;
+    border-radius: 10px;
+    padding: 0px 25px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow:inset 1px 1px 1px 0px rgba(214, 188, 255, 0.623),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+    background: #F8E559;
+    width: 155px;
+    height: 55px;
+    border: none;
+}
+    
+#nextg:hover,
+#nextg:active {
+    background-color: #864AF9;
+    color: #F8E559;
+    box-shadow: 0 0.6em 0.6em -0.4em #864AF9;
+    transform: translateY(-0.55em);
+}
+
+#board {
+    width: fit-content;
+    background-color: #3B3486;
+    padding: 8px;
+    border-radius: 8px;
+
+    .flex-container {
+
+        .buttons {
+            width: 80px;
+            height: 80px;
+            border-radius: 6px;
+            font-family: myFont;
+            color: #F8E559;
+            background-color: #864AF9;
+            margin: 7px;
+            text-align: center;
+            font-size: 45px;
+        }
+
+        .buttons:hover,
+        .buttons:focus {
+            background-color: #332941;
+            transform: scale(1.1);
+        }
+    }
+}
+
+/* dinagdag ko lang para sa reset score */
+#filler {
+    width: 20px;
+}
+
+#reset_score {
+    font-family: myFont;
+    font-size: 20px;
+    color: #3B3486;
+    border-radius: 10px;
+    padding: 0px 25px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow:inset 1px 1px 1px 0px rgba(214, 188, 255, 0.623),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+    background: #F8E559;
+    width: 155px;
+    height: 55px;
+    border: none;
+}
+    
+#reset_score:hover,
+#reset_score:active {
+    background-color: #864AF9;
+    color: #F8E559;
+    box-shadow: 0 0.6em 0.6em -0.4em #864AF9;
+    transform: translateY(-0.55em);
+}
