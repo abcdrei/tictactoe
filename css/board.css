@@ -13,12 +13,12 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 #title {
     font-family: myFont;
-    font-size: 65px;
+    font-size: 60px;
     color: #F8E559;
     letter-spacing: 2px;
     margin-bottom: 5px;
@@ -26,6 +26,7 @@ body {
 
 #scoreboard {
     font-family: myFont;
+    font-size: 25px;
     letter-spacing: 2px;
     color: #F8E559;
     margin-bottom: 20px;
@@ -67,7 +68,7 @@ body {
 }
     
 #nextg:hover,
-#nextg:active {
+#nextg:active { 
     background-color: #864AF9;
     color: #F8E559;
     box-shadow: 0 0.6em 0.6em -0.4em #864AF9;
@@ -83,8 +84,8 @@ body {
     .flex-container {
 
         .buttons {
-            width: 70px;
-            height: 70px;
+            width: 60px;
+            height: 60px;
             border-radius: 6px;
             font-family: myFont;
             color: #F8E559;
