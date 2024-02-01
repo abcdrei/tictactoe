@@ -18,10 +18,10 @@ body {
 
 #title {
     font-family: myFont;
-    font-size: 75px;
+    font-size: 65px;
     color: #F8E559;
     letter-spacing: 2px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 #scoreboard {
@@ -33,7 +33,7 @@ body {
 
 #result {
     font-family: myFont;
-    font-size: 40px;
+    font-size: 35px;
     letter-spacing: 3px;
     color: #F8E559;
     margin-top: 30px;
@@ -48,7 +48,7 @@ body {
 
 #nextg {
     font-family: myFont;
-    font-size: 20px;
+    font-size: 16px;
     color: #3B3486;
     border-radius: 10px;
     padding: 0px 25px;
@@ -60,9 +60,10 @@ body {
     7px 7px 20px 0px rgba(0,0,0,.1),
     4px 4px 5px 0px rgba(0,0,0,.1);
     background: #F8E559;
-    width: 155px;
-    height: 55px;
+    width: 145px;
+    height: 45px;
     border: none;
+    margin-bottom: 20px;
 }
     
 #nextg:hover,
@@ -82,13 +83,13 @@ body {
     .flex-container {
 
         .buttons {
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
             border-radius: 6px;
             font-family: myFont;
             color: #F8E559;
             background-color: #864AF9;
-            margin: 7px;
+            margin: 6px;
             text-align: center;
             font-size: 45px;
         }
@@ -108,7 +109,7 @@ body {
 
 #reset_score {
     font-family: myFont;
-    font-size: 20px;
+    font-size: 16px;
     color: #3B3486;
     border-radius: 10px;
     padding: 0px 25px;
@@ -120,9 +121,10 @@ body {
     7px 7px 20px 0px rgba(0,0,0,.1),
     4px 4px 5px 0px rgba(0,0,0,.1);
     background: #F8E559;
-    width: 155px;
-    height: 55px;
+    width: 145px;
+    height: 45px;
     border: none;
+    margin-bottom: 20px;
 }
     
 #reset_score:hover,
