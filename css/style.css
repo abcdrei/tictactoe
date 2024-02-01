@@ -17,7 +17,7 @@ body {
     color: #F8E559;
     letter-spacing: 4px;
     font-family: myFont;
-    font-size: 110px;
+    font-size: 100px;
     text-align: center;
     text-shadow: 
     3px  4px     #864AF9, 
@@ -30,7 +30,7 @@ body {
 #gamemode {
     margin-top: -10px;
     font-family: myFont;
-    font-size: 55px;
+    font-size: 45px;
     letter-spacing: 2px;
     color: #9b64ff;
     text-align: center;
@@ -42,7 +42,7 @@ body {
     margin-top: 30px;
     text-align: center;
     font-family: myFont;
-    font-size: 50px;
+    font-size: 40px;
     color: #9b64ff;
     letter-spacing: 2px;
     text-shadow: 0px 0px 10px rgba(137, 46, 255, 0.842);
@@ -72,8 +72,8 @@ a:visited {
     color: #332941;
     letter-spacing: 1.5px;
     font-family: myFont;
-    margin: 25px;
-    font-size: 30px;
+    margin: 15px;
+    font-size: 20px;
     text-decoration: none;
 }
 
@@ -81,7 +81,7 @@ a:hover,
 a:active {
     background-color: #864AF9;
     color: #F8E559;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 footer {
