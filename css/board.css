@@ -16,6 +16,7 @@ body {
 }
 
 #logo {
+    width: 350px;
     margin-top: -20px;
     margin-bottom: -40px;
 }
@@ -54,6 +55,8 @@ body {
     position: relative;
     margin-bottom: 20px;
     margin-right: 40px;
+    border: none;
+    cursor: pointer;
 }
 
 #home:hover,
