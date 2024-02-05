@@ -227,6 +227,28 @@ function buttonFunc(buttonNum) {
 
         if (winner == "X" || winner == "O") {
             document.getElementById("result").innerHTML = "The winner is " + winner;
+
+            // ======== #332941
+            let a = null;
+            for (let j=0; j<winCombos.length; j++) {
+                temp = [];
+                for (let k=0; k<winCombos[j].length; k++) {
+                    temp.push(button_states[winCombos[j][k]]);
+                }
+
+                const combChecker = temp.every(element => element == winner);
+                if (combChecker) {
+                    a = winCombos[j]
+                    for (l=0; l<a.length; l++) {
+                        butid="but" + a[l];
+                        document.getElementById(butid).style.backgroundColor = "#332941";
+                    }
+                    break;
+                }
+            }
+
+            // ========
+
             let i = 0;
             const end = 29;
             while (i <= end) {
@@ -256,6 +278,24 @@ function buttonFunc(buttonNum) {
 
             return;
         }
+
+        const isXorO = element => element === 'X' || element === 'O';
+        const allElementsAreXorO = button_states.every(isXorO);
+
+        if (allElementsAreXorO) {
+            document.getElementById("result").innerHTML = "Draw!"
+            let i = 0;
+            let id="but" + i;
+            while (i <= 29) {
+                document.getElementById(id).style.backgroundColor="#332941";
+                i++;
+                id="but" + i;
+            }
+            
+            return
+        } else {
+            return
+        }
     }
 
     
@@ -274,21 +314,11 @@ function buttonFunc(buttonNum) {
     ai_move();
     check_win();
     change_turn();
+    updateButtonsVisibility();
 }
 
 function nextg_button () {
     if (point_x >= matches_to_win || point_y >= matches_to_win) {
-        turn = "X"
-        let i = 0;
-        const end = 29;
-        butid = "but" + i;
-        while (i <= end) {
-            button_states[i] = "unclicked";
-            document.getElementById(butid).innerHTML= "";
-            i++;
-            butid = "but" + i;
-        }
-
         point_x = 0;
         point_y = 0;
         document.getElementById("scoreboard").innerHTML = "X - " + point_x + " | O - " + point_y;
@@ -302,10 +332,12 @@ function nextg_button () {
     while (i <= end) {
         button_states[i] = "unclicked";
         document.getElementById(butid).innerHTML= "";
+        document.getElementById(butid).style.backgroundColor="#864AF9";
         i++;
         butid = "but" + i;
     }
     document.getElementById("result").innerHTML= "";
+    updateButtonsVisibility();
 }
 
 function reset_score() {
@@ -321,8 +353,51 @@ function reset_score() {
     while (i <= end) {
         button_states[i] = "unclicked";
         document.getElementById(butid).innerHTML= "";
+        document.getElementById(butid).style.backgroundColor="#864AF9";
         i++;
         butid = "but" + i;
     }
     document.getElementById("result").innerHTML= ""
+    updateButtonsVisibility();
 } 
+
+function updateButtonsVisibility() {
+    const resetBoardButton = document.getElementById("nextg");
+    const resetScoreButton = document.getElementById("reset_score");
+    const resetAllButton = document.getElementById("resetAllButton");
+
+    if (point_x >= matches_to_win || point_y >= matches_to_win) {
+        resetBoardButton.style.display = "none";
+        resetScoreButton.style.display = "none";
+        resetAllButton.style.display = "block";
+    } else {
+        resetBoardButton.style.display = "block";
+        resetScoreButton.style.display = "block";
+        resetAllButton.style.display = "none";
+    }
+}
+
+function resetAllGame() {
+    point_x = 0;
+    point_y = 0;
+    turn = "X";
+    button_states.fill("unclicked");
+    for (let i = 0; i <= 29; i++) {
+        document.getElementById("but" + i).innerHTML = "";
+    }
+    document.getElementById("scoreboard").innerHTML = "X - " + point_x + " | O - " + point_y;
+    document.getElementById("result").innerHTML = "";
+
+    let i = 0;
+    const end = 29;
+    butid = "but" + i;
+    while (i <= end) {
+        button_states[i] = "unclicked";
+        document.getElementById(butid).innerHTML= "";
+        document.getElementById(butid).style.backgroundColor="#864AF9";
+        i++;
+        butid = "but" + i;
+    }
+
+    updateButtonsVisibility();
+}

@@ -4,12 +4,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/board.css">
         <link rel="icon" type="image/png" href="icon/favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <title>Two Players</title>
         <script src="js/multiplayer.js"></script>
     </head>
     
     <body>
-        <h1 id="title">TIC-TAC-TOE</h1>
+        <img id="logo" src="game_logo.png">
         <h1 id="scoreboard">X = 0 | O = 0</h1>
         <div id="board">
             <div class="flex-container">
@@ -59,12 +60,13 @@
         </div>
 
         <h2 id="result"></h2>
-
+        
         <div class="flex-container">
+            <a href="index.html" class="fa-solid fa-house" id="home"></a>
             <button id="nextg" onclick="nextg_button()">RESET BOARD</button>
             <div id="filler"></div>
             <button id="reset_score" onclick="reset_score()">RESET SCORE</button>
+            <button id="resetAllButton" style="display: none;" onclick="resetAllGame()">RESET ALL</button>
         </div>
-        
     </body>
 </html>
